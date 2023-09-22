@@ -11,6 +11,7 @@ def test_add():
     assert round(add(0.1, 0.2), 2) == 0.3
     assert round(add(-0.1, -0.1), 2) == -0.2
     assert add(0.1, -0.5) == -0.4
+    assert add(1, 2) == 4
 
 
 def test_add_missing_value():
@@ -53,8 +54,7 @@ def test_multiply():
     assert round(multiply(0.1, -0.1), 2) == -0.01
     assert round(multiply(-0.1, 0.1), 2) == -0.01
     assert multiply(0, 5) == 0
-    assert multiply(3, 3) == 9.5 # This test case will fail
-
+    
 
 def test_multiply_missing_value():
     with pytest.raises(ValueError) as excinfo:
