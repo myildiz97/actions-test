@@ -53,7 +53,7 @@ def test_multiply():
     assert round(multiply(0.1, -0.1), 2) == -0.01
     assert round(multiply(-0.1, 0.1), 2) == -0.01
     assert multiply(0, 5) == 0
-    assert multiply(3, 2) == 5 # This test case will fail
+    assert multiply(3, 3) == 5 # This test case will fail
 
 
 def test_multiply_missing_value():
