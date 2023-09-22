@@ -10,7 +10,7 @@ def test_add():
     assert add(0, 0) == 0
     assert round(add(0.1, 0.2), 2) == 0.3
     assert round(add(-0.1, -0.1), 2) == -0.2
-
+    assert add(0.1, -0.5) == -0.4
 
 def test_add_missing_value():
     with pytest.raises(ValueError) as excinfo:
@@ -73,8 +73,7 @@ def test_divide():
     assert round(divide(0.1, 0.2), 2) == 0.5
     assert round(divide(-0.1, -0.1), 2) == 1
     assert round(divide(0.1, -0.1), 2) == -1
-    # assert round(divide(-0.1, 0.1), 2) == -1
-    assert divide(-0.1, 0.1) == -1
+    assert round(divide(-0.1, 0.1), 2) == -1
 
 
 def test_divide_by_zero():
